@@ -30,7 +30,8 @@ var Juego = function() {
 	var posicionInicial=new Posicion(0,62,30,30);
 	var bomberman = new Personaje();
 	bomberman.setPosicion(posicionInicial);
-	var manejadornave = new ManejadorDeEventos(bomberman);	
+	var manejadornave = new ManejadorDeEventos();
+	manejadornave.agregar(bomberman);	
 	
 	this.correrJuego = function() {
 		limpiar();

@@ -1,4 +1,6 @@
+
 function Personaje(){
+
 	this.posx = new Number(POSX_INICIAL);
     this.posy = new Number(POSY_INICIAL);
     this.figura = new Image();
@@ -74,5 +76,31 @@ function Personaje(){
 		if(this.posx>0)
 		this.posx-=15;
 	};
+	
+	
+	this.reaccionar=function(tecla){
+		switch(tecla){	
+		    
+		    case 37:
+				this.correrIzquierda();
+				this.animar(93);				
+		    break;
+		    
+			case 39:
+				this.correrDerecha();
+				this.animar(33);				
+		    break;	
+		    
+			case 40:
+				this.correrAbajo();
+				this.animar(63);				
+		    break;	
+		    
+			case 38:
+				this.correrArriba();
+				this.animar(0);				
+		    break;	
+		}
+	}
   
 }
